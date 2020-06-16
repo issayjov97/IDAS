@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bordPn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="743.0" style="-fx-background-color: #3b4854;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sempraceidas2.mainwindow.FXMLDocumentController">
+   <top>
+      <AnchorPane prefHeight="62.0" prefWidth="705.0" style="-fx-background-color: #00e0d8;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="nastaveniBtn" layoutX="627.0" layoutY="14.0" style="-fx-background-color: #3b4854 #3b48 #00e0d854;" textFill="RED" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="14.0">
+               <contextMenu>
+                  <ContextMenu maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="50.0">
+                    <items>
+                      <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <JFXToggleButton fx:id="soundBtn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="10.0" prefWidth="15.0" text="Sound" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleButtonLogOutAction" text="Log out">
+                           <graphic>
+                              <ImageView fx:id="logOutBtmage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuItem3ZobrazitOznameniAction" text="Zobrazit oznameni">
+                           <graphic>
+                              <ImageView fx:id="oznameniItemImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic></MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleMenuItemSimulationAction" text="Simulace">
+                           <graphic>
+                              <ImageView fx:id="simulaceImage" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+               <graphic>
+                  <ImageView fx:id="imageNstavBtn" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></JFXButton>
+            <ImageView fx:id="image1" fitHeight="50.0" fitWidth="85.0" layoutX="26.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="634.0" AnchorPane.topAnchor="5.0">
+               <image>
+                  <Image url="@../../../../../../Downloads/books-stack-of-three.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="266.0" layoutY="27.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="33.0" prefWidth="169.0" text="UPCE" textAlignment="CENTER" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="266.0" AnchorPane.rightAnchor="265.0" AnchorPane.topAnchor="27.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <JFXButton fx:id="btnSimulation" disable="true" layoutX="197.0" layoutY="9.0" onAction="#handleButtonSimulationAction" prefHeight="25.0" prefWidth="391.0" style="-fx-background-color: white;" text="End Simulation" textFill="#ff0606" visible="false" />
+         </children>
+      </AnchorPane>
+   </top>
+   <right>
+      <JFXDrawer fx:id="drawer" alignment="TOP_RIGHT" defaultDrawerSize="130.0" direction="RIGHT" prefHeight="317.0" prefWidth="130.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXHamburger fx:id="hamburger" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="30.0" />
+         </children>
+      </JFXDrawer>
+   </right>
+   <left>
+      <AnchorPane prefHeight="438.0" prefWidth="607.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="249.0" layoutY="88.0" />
+            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="85.0" layoutY="84.0" onMouseClicked="#handleMouseClickedAction" radius="73.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="11.0" />
+            <JFXListView fx:id="listUdalosti" layoutX="165.0" layoutY="165.0" prefHeight="213.0" prefWidth="385.0" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="165.0">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#handleButtonPridatAction" text="Pridat" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleButtonOdebratAction" text="Odebrat" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></JFXListView>
+            <Label fx:id="jmenoLabel" layoutX="176.0" layoutY="51.0" prefHeight="20.0" prefWidth="101.0" text="Hi" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="prijmeniLabel" layoutX="176.0" layoutY="80.0" prefHeight="20.0" prefWidth="113.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="25.0" text="Jste prihlasen jako:" textFill="#d7caca">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="107.0" prefHeight="20.0" prefWidth="101.0" text="Studijni plan: " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="132.0" prefHeight="20.0" prefWidth="101.0" text="Studijni obor:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="planLabel" layoutX="266.0" layoutY="105.0" prefHeight="20.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="oborLabel" layoutX="266.0" layoutY="130.0" prefHeight="20.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="roleLabel" layoutX="304.0" layoutY="25.0" prefHeight="20.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <VBox fx:id="mainBox" layoutX="22.0" layoutY="165.0" prefHeight="162.0" prefWidth="117.0" spacing="5.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="165.0">
+               <children>
+                  <JFXButton onMouseClicked="#handleButtonUdalostiAction" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #00e0d8;" text="Udalosti">
+                     <graphic>
+                        <ImageView fx:id="imageUdal" fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Downloads/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton onAction="#handleButtonNastaveniAction" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #00e0d8;" text="Nastaveni">
+                     <graphic>
+                        <ImageView fx:id="imageNastav" fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Downloads/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton onAction="#handleButtonObrazkyAction" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #00e0d8;" text="Obrazky">
+                     <graphic>
+                        <ImageView fx:id="imageNastav1" fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="vuycPredmetyButton" onAction="#handleButtonVuycPredmetyAction" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #00e0d8;" text="VyucPred">
+                     <graphic>
+                        <ImageView fx:id="imageVuycPredmety" fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <VBox fx:id="adminBox" prefHeight="78.0" prefWidth="118.0" spacing="5.0">
+                     <children>
+                        <JFXButton onAction="#handleButtonPredmetyAction" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #00e0d8;" text="Predmety">
+                           <graphic>
+                              <ImageView fx:id="imagePredmety" fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Downloads/settings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onAction="#handleButtonImportAction" onMouseClicked="#handleButtonUdalostiAction" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #00e0d8;" text="Import">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Downloads/settings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onAction="#handleButtonOboryAction" prefHeight="27.0" prefWidth="118.0" style="-fx-background-color: #00e0d8;" text="Studijni obory">
+                           <graphic>
+                              <ImageView fx:id="imageObory" fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Downloads/settings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onAction="#handleButtonPlanyAction" prefHeight="29.0" prefWidth="120.0" style="-fx-background-color: #00e0d8;" text="Studijni plany">
+                           <graphic>
+                              <ImageView fx:id="imagePlany" fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Downloads/settings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onAction="#handleButtonRoleAction" prefHeight="7.0" prefWidth="117.0" style="-fx-background-color: #00e0d8;" text="Role">
+                           <graphic>
+                              <ImageView fx:id="imageRole" fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Downloads/settings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton onAction="#handleButtonPodminkyAction" prefHeight="7.0" prefWidth="117.0" style="-fx-background-color: #00e0d8;" text="Podminky">
+                           <graphic>
+                              <ImageView fx:id="imageRole1" fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Downloads/settings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

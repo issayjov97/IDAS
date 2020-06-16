@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="492.0" prefWidth="668.0" style="-fx-background-color: #3b4854;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sempraceidas2.mesasgeswindow.MessagesWindowController">
+   <bottom>
+      <JFXButton onAction="#handleButtonBackAction" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #00e0d8;" text="Back" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </BorderPane.margin>
+      </JFXButton>
+   </bottom>
+   <top>
+      <HBox prefHeight="47.0" prefWidth="494.0" style="-fx-background-color: #3b4854;" BorderPane.alignment="BOTTOM_LEFT">
+         <children>
+            <Label prefHeight="19.0" prefWidth="61.0" text="Jmeno" textFill="WHITE" />
+            <JFXTextField fx:id="jmenoField" focusColor="TRANSPARENT" style="-fx-background-color: white;" unFocusColor="TRANSPARENT">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <Label text="Prijmeni" textFill="WHITE" />
+            <JFXTextField fx:id="prijmeniField" focusColor="#ff000000" style="-fx-background-color: white;">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </JFXTextField>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="307.0" prefWidth="110.0" spacing="10.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <center>
+      <GridPane prefHeight="415.0" prefWidth="192.0" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets left="10.0" right="5.0" />
+         </BorderPane.margin>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <JFXListView fx:id="listZprav1" prefHeight="385.0" prefWidth="244.0" GridPane.rowIndex="1">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#handleButtonSmazatRightListAction" text="Odstranit zpravu" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </JFXListView>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="88.0" text="Odeslane" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </center>
+   <right>
+      <GridPane prefHeight="390.0" prefWidth="352.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="5.0" right="10.0" />
+         </BorderPane.margin>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="25.0" prefWidth="93.0" text="Prijate" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXListView fx:id="listZprav" prefHeight="386.0" prefWidth="352.0" GridPane.rowIndex="1">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#handleButtonSmazatLeftListAction" text="Odstranit zpravu" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </JFXListView>
+         </children>
+      </GridPane>
+   </right>
+</BorderPane>

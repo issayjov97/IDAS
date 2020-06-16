@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="861.0" style="-fx-background-color: #3b4854;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sempraceidas2.predmetywindow.PredmetyWindowController">
+   <center>
+      <TableView fx:id="tableView" prefHeight="491.0" prefWidth="297.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="idPredmetuCol" minWidth="100.0" prefWidth="124.0" text="ID PREDMETU" />
+            <TableColumn fx:id="zkratkaCol" minWidth="100.0" prefWidth="140.0" text="ZKRATKA" />
+            <TableColumn fx:id="nazevCol" minWidth="67.0" prefWidth="134.0" text="NAZEV" />
+         </columns>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="573.0" spacing="10.0" style="-fx-background-color: #00e0d8;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imagePredmety" fitHeight="26.0" fitWidth="54.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="102.0" text="Predmety" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="15.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#handleButtonBackAction" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #00e0d8;" text="Back" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#handleButtonOdstranitAction" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: #00e0d8;" text="Odstranit predmet" textFill="WHITE" />
+            <JFXButton onAction="#handleButtonPridatAction" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #00e0d8;" text="Pridat predmet" textFill="WHITE" />
+            <JFXButton onAction="#handleButtonPridatVyucujchoAction" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: #00e0d8;" text="PridatVyucujiciho" textFill="WHITE" />
+            <JFXButton onAction="#handleButtonOdebratVyucujchoAction" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #00e0d8;" text="OdebratVyucuiciho" textFill="WHITE" />
+            <JFXButton onAction="#handleButtonZmenitPlanAction" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #00e0d8;" text="Plan predmetu" textFill="WHITE" />
+            <JFXButton onAction="#handleButtonPridatPodminkuAction" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #00e0d8;" text="Pridat podminku" textFill="WHITE">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#handleButtonOdebratPodminkuAction" prefHeight="25.0" prefWidth="121.0" style="-fx-background-color: #00e0d8;" text="Odebrat podminku" textFill="WHITE" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <right>
+      <VBox prefHeight="497.0" prefWidth="371.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Vyucujici" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ListView fx:id="listVyucujici" prefHeight="199.0" prefWidth="366.0" />
+            <Label text="Podminky" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ListView fx:id="podminkyList" prefHeight="215.0" prefWidth="318.0" />
+         </children>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </VBox>
+   </right>
+</BorderPane>

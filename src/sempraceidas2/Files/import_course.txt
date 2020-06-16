@@ -1,0 +1,24 @@
+id_course;course_shrt_name;course_name
+1;IDZAM;Selected Chapters from Applied Mathematics
+2;IDZNP;Stochastic Processes
+3;INAK2;English conversation for follow-up master students
+4;INAKO;English conversation for follow-up master students
+5;IZST1;Traineeship abroad 1
+6;IZST2;Traineeship abroad 2
+7;PROJ1;Project 1
+8;PROJ2;Project 2
+9;ZAAP;English for Academic Purposes for Erasmus students
+10;ZNAKO;English Conversation for Erasmus Students
+11;IPAAH;Angli?tina pro akademické úcely II - B2+
+12;IDAS1;Databázové systémy I
+13;IDATS;Datové struktury
+14;KCV2;Kondicní cvicení LS
+15;IMAT2;Matematika 2
+16;IMSW;Modelování ve výpoctových SW
+17;ISQBD;noSQL systémy a Big Data
+18;IOPE2;Odborná praxe - exkurze II
+19;ICSHP;Programování v .NET a C#
+20;IRPP2;Rízená prázdninová praxe II
+21;ITEJA;Teorie jazyká
+22;IZAPR;Základy programování
+23;I3DGR;3D grafika

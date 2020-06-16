@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="800.0" style="-fx-background-color: #3b4854;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sempraceidas2.obrazkywindow.ObrazkyWindowController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="100.0" style="-fx-background-color: #3b4854;">
+         <children>
+            <JFXButton onAction="#handleButtonBackAction" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #00e0d8;" text="Back" />
+            <JFXButton fx:id="deleteImageBtn" onAction="#handleButtonOdebratAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #00e0d8;" text="Odebrat" />
+            <JFXButton fx:id="addImageBtn" onAction="#handleButtonPridatAction" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #00e0d8;" text="Pridat">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+   </bottom>
+   <right>
+      <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="416.0" prefWidth="245.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextArea fx:id="textArea" prefHeight="354.0" prefWidth="235.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </VBox.margin>
+            </JFXTextArea>
+            <JFXTextField fx:id="inputText" prefHeight="28.0" prefWidth="245.0" promptText="Komentar" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets right="10.0" />
+               </VBox.margin>
+            </JFXTextField>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="283.0" fitWidth="423.0" layoutX="39.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="9.0" />
+            <JFXButton fx:id="nextBt" layoutX="556.0" layoutY="155.0" onAction="#handleButtonNextAction" prefHeight="40.0" style="-fx-background-color: black;" text="&gt;" textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="155.0">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="prevBt" layoutX="8.0" layoutY="156.0" onAction="#handleButtonPreviousAction" style="-fx-background-color: black;" text="&lt;" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="155.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="label" layoutX="437.0" layoutY="484.0" prefHeight="32.0" prefWidth="40.0" textFill="#29e474" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="323.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="likeBt" buttonType="RAISED" layoutX="135.0" layoutY="322.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleButtonLikeAction" prefHeight="33.0" prefWidth="102.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="Like" AnchorPane.rightAnchor="-7.0" AnchorPane.topAnchor="322.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="lkView" fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="profileBtn" buttonType="RAISED" layoutX="145.0" layoutY="292.0" minHeight="-Infinity" minWidth="-Infinity" onAction="#handleButtonProfileImageAction" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: white; -fx-background-radius: 20;" text="Set as profile" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="320.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>

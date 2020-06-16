@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="588.0" prefWidth="667.0" style="-fx-background-color: #3b4854;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sempraceidas2.groupswindow.GroupsWindowController">
+   <center>
+      <TreeTableView fx:id="tableTreeView" prefHeight="244.0" prefWidth="588.0">
+         <columns>
+            <TreeTableColumn fx:id="nazevKom" minWidth="-1.0" prefWidth="171.0" text="Nazev" />
+            <TreeTableColumn fx:id="obsahKom" minWidth="-1.0" prefWidth="230.0" text="Obsah" />
+            <TreeTableColumn fx:id="datumKom" minWidth="-1.0" prefWidth="181.0" text="Datum" />
+         </columns>
+         <BorderPane.margin>
+            <Insets left="15.0" right="15.0" />
+         </BorderPane.margin>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleButtonInfoAction" text="Informace" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TreeTableView>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" spacing="30.0" style="-fx-background-color: #3b4854;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#handleButtonBackAction" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: #00e0d8;" text="Back" />
+            <JFXButton fx:id="odebrBut" onAction="#handleButtonOdebratAction" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #00e0d8;" text="Odebrat" />
+            <JFXButton onAction="#handleButtonNapsatKomentarAction" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #00e0d8;" text="Napsat komentar" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" top="20.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="583.0" style="-fx-background-color: #00e0d8;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="15.0" />
+         </BorderPane.margin>
+         <children>
+            <ImageView fx:id="imageView" fitHeight="30.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label text="Chat" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children></HBox>
+   </top>
+   <right>
+      <VBox prefHeight="219.0" prefWidth="157.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Jmeno autora" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameField" editable="false" />
+            <Label text="Prijmeni autora" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="surnameField" editable="false" />
+         </children>
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>

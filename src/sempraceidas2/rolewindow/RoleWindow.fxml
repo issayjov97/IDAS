@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="459.0" style="-fx-background-color: #3b4854;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sempraceidas2.rolewindow.RoleWindowController">
+   <center>
+      <TableView fx:id="tableView" prefHeight="390.0" prefWidth="445.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="idRoleCol" minWidth="100.0" prefWidth="-1.0" text="ID ROLE" />
+            <TableColumn fx:id="nazevCol" minWidth="100.0" prefWidth="-1.0" text="NAZEV" />
+            <TableColumn fx:id="poznamkaCol" minWidth="100.0" prefWidth="-1.0" text="POZNAMKA" />
+            <TableColumn fx:id="opravneniCol" minWidth="100.0" prefWidth="-1.0" text="OPRAVNENI" />
+         </columns>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="573.0" spacing="10.0" style="-fx-background-color: #00e0d8;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imagView" fitHeight="26.0" fitWidth="43.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="50.0" text="ROLE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="15.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#handleButtonBackAction" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #00e0d8;" text="Back" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#handleButtonOdstranitAction" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #00e0d8;" text="Odstranit" textFill="WHITE" />
+            <JFXButton onAction="#handleButtonPridatAction" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #00e0d8;" text="Pridat" textFill="WHITE" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

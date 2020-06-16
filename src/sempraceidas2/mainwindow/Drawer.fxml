@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: #00e0d8;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sempraceidas2.mainwindow.DrawerController">
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton alignment="CENTER" contentDisplay="TOP" onAction="#handleSkupinyAction" prefHeight="100.0" prefWidth="133.0" style="-fx-background-color: #00e0d8; -fx-border-color: 20;" text="Skupiny" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/avatar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" onAction="#handleZpravyAction" prefHeight="100.0" prefWidth="133.0" style="-fx-background-color: #00e0d8;" text="Zpravy" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/envelope.png" />
+                     </image></ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" onAction="#handleKontaktyAction" prefHeight="100.0" prefWidth="133.0" style="-fx-background-color: #00e0d8;" text="Kontakty" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/book.png" />
+                     </image></ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" onAction="#handleNajitAction" prefHeight="100.0" prefWidth="133.0" style="-fx-background-color: #00e0d8;" text="Najit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/magnifying-glass.png" />
+                     </image></ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

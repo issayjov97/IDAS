@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="791.0" style="-fx-background-color: #3b4854;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sempraceidas2.oborywindow.OboryWindowController">
+   <center>
+      <TableView fx:id="tableView" prefHeight="390.0" prefWidth="445.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="idOboruCol" minWidth="100.0" prefWidth="-1.0" text="ID OBORU" />
+            <TableColumn fx:id="nazevCol" minWidth="100.0" prefWidth="-1.0" text="NAZEV" />
+            <TableColumn fx:id="popisCol" minWidth="100.0" prefWidth="-1.0" text="POPIS" />
+         </columns>
+         <BorderPane.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="573.0" spacing="10.0" style="-fx-background-color: #00e0d8;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="imageObory" fitHeight="26.0" fitWidth="51.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="131.0" text="STUDIJNI OBORY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="15.0" />
+         </BorderPane.margin>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton onAction="#handleButtonBackAction" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #00e0d8;" text="Back" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton onAction="#handleButtonOdstranitAction" prefHeight="25.0" prefWidth="111.0" style="-fx-background-color: #00e0d8;" text="Odstranit  obor" textFill="WHITE" />
+            <JFXButton onAction="#handleButtonPridatAction" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #00e0d8;" text="Pridat obor" textFill="WHITE" />
+            <JFXButton onAction="#handleButtonOdebratPlanAction" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #00e0d8;" text="Odstranit plan" textFill="WHITE" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <right>
+      <VBox prefHeight="383.0" prefWidth="334.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="30.0" right="10.0" />
+         </BorderPane.margin>
+         <children>
+            <Label text="Plany" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <JFXListView fx:id="planyList" prefHeight="430.0" prefWidth="334.0" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

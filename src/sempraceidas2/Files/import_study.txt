@@ -1,0 +1,6 @@
+id_stu_dep;dep
+1;Aplikovaná elektrotechnika
+2;Automatizace (Rízení proces)
+3;Informacní technologie
+4;Filozofie
+5;Informatika ve verejné správa
